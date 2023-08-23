@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+:root {
+    --primary-color: #181820;
+    --secodary-color: #535050;
+    --text-primary: #fff;
+    --text-hover: #2374e1;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px repeat(4,237px);
+    grid-template-areas: 
+    "header header header header"
+    "aside main main article"
+     "aside main main article"
+     "aside main main article"
+     "aside main main article"
+    ;
+
+}
+header {
+    background: var(--primary-color);
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.search {
+    border: none;
+    height: 46px;
+    width: 46px;
+    border-radius: 50%;
+    padding-left: 46px;
+
+    background: url(/assets/IMG/header/lupa.svg) no-repeat 10px/24px, var(--secodary-color);
+    cursor: pointer;
+    transition-property: width, border-radius, box-shadow;
+    transition-duration: 300ms;
+}
+.search:focus {
+    width: 204px;
+    border-radius: 100px;
+    box-shadow: 0 0 0 2px #12c8ff;
+    outline: none;
+    cursor: auto;
+    color: var(--text-primary);
+}
+
+.left {
+    width: 280px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.left img {
+    width: 46px;
+    height: 46px;
+    
+}
+
+aside {
+    background-color: #2374e1;
+    grid-area: aside;
+    
+    
+}
+main {
+    background-color: aqua;
+    grid-area: main;
+}
+article {
+    background-color: bisque;
+    grid-area: article;
+}
