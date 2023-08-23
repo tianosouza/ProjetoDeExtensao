@@ -2,6 +2,7 @@
 :root {
     --primary-color: #181820;
     --secodary-color: #535050;
+    --bacground-primary: #1e1e1e;
     --text-primary: #fff;
     --text-hover: #2374e1;
 }
@@ -15,7 +16,7 @@ body {
     font-family: 'Poppins', sans-serif;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 100px repeat(4,237px);
+    grid-template-rows: 80px repeat(4,300px);
     grid-template-areas: 
     "header header header header"
     "aside main main article"
@@ -28,15 +29,17 @@ body {
 header {
     background: var(--primary-color);
     grid-area: header;
+    width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;   
     
 }
 .search {
     border: none;
-    height: 46px;
-    width: 46px;
-    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
     padding-left: 46px;
 
     background: url(/assets/IMG/header/lupa.svg) no-repeat 10px/24px, var(--secodary-color);
@@ -52,24 +55,95 @@ header {
     cursor: auto;
     color: var(--text-primary);
 }
-
 .left {
-    width: 280px;
+    width: 265px;
+    height: 50px;
     display: flex;
     align-items: center;
+    margin-left: 10px;
     gap: 12px;
 }
 .left img {
     width: 46px;
     height: 46px;
-    
+}
+.center {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    gap: 12px;
+}
+.right img {
+    width: 46px;
+    height: 46px;
 }
 
+
 aside {
-    background-color: #2374e1;
-    grid-area: aside;
+    background-color: var(--bacground-primary);
+    grid-area: aside; 
     
-    
+}
+.navigator {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.navigator-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.navigator-nav .nav-itme {
+    display: flex;
+    gap: 10px;
+    color: var(--text-primary);
+}
+.navigator-your {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    color: var(--text-primary);
+}
+.navigator-your h2 {
+    font-size: 18px;
+}
+.navigator-your .atalhos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.your-atalhos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+.atalhos span {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    display: flex;
+    background-color: var(--text-primary);
+    color: var(--bacground-primary);
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.footer ul{
+    margin-top: 60px;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 main {
     background-color: aqua;
